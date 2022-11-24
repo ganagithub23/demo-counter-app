@@ -1,17 +1,19 @@
-pipeline {
+pipeline{
 
     agent any
 
-    stages{
+    stages {
 
-        stage(git checkout){
+        stage('Git Checkout'){
 
             steps{
-                
-                script{
 
+                script{
+                   
+                    git branch: 'main', url: 'https://github.com/ganagithub23/demo-counter-app.git'
                 }
+            }
         }
+
     }
-  }
 }
